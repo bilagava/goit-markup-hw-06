@@ -622,10 +622,8 @@ img{
 .baсkdrop.is-hidden{
     visibility: hidden;
     pointer-events: none;
-    opacity: 0;
-    
+    opacity: 0;   
 }
-
 .baсkdrop{
     position: fixed;
     top: 0;
@@ -637,7 +635,6 @@ img{
     visibility: visible;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 }
-
 .modal{
     position: absolute;
     width: 528px;
@@ -670,6 +667,7 @@ img{
     box-sizing: border-box;
     border-radius: 4px;
 }
+
 .modal-btn{
     position: fixed;
     top: 8px;
