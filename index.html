@@ -359,7 +359,19 @@
                             </a>
                         </li>
                     </ul>
-                </div>                             
+                </div> 
+
+                <div class="footer-mailing">
+                    <p class="footer-mailing-title">Подпишитесь на рассылку</p>
+                    <form class="footer-mailing-form"> 
+                        <div class="">
+                            <label for="footer-mail"></label>
+                            <input type="email" name="mail" id="footer-mail" placeholder="E-mail" />
+                        </div>
+                        <button type="submit" class="footer-btn-subscribe">Подписаться</button>
+                    </form>    
+                </div>
+
             </div> 
         </footer>
         <!--=================== MODAL ==================== --> 
@@ -384,15 +396,15 @@
                         <label for="user-mail">Почта</label>
                         <input type="email" name="mail" id="user-mail" />
                     </div>
-                    
-                    <label for="user-comment">Коментарий</label>
-                    <textarea name="comment" id="user-comment" rows="10" placeholder="Введите текст"></textarea>
-                    <br>
-
-                    <input type="checkbox" name="consent" id="user-consent">
-                    <label for="user-consent">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
-
-                    <button type="submit">Отправить</button>
+                    <div class="comment">
+                        <label for="user-comment">Коментарий</label>
+                        <textarea name="comment" id="user-comment" rows="" placeholder="Введите текст"></textarea>
+                    </div>
+                    <div class="checkbox ">
+                        <input type="checkbox" name="consent" id="user-consent">
+                        <label for="user-consent">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
+                    </div>                  
+                    <button type="submit" class="modal-btn-close">Отправить</button>
                 </form>
             </div>
         </div>
