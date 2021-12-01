@@ -23,6 +23,8 @@
 /* ацент цвет ссылок соцсетей #FFFFFF*/
 /* ацент цвет фона ссылок соцсетей #2196F3*/
 
+/* основной цвет иконок модалок #212121 */
+
 :root {
     --main-title-color:#FFFFFF;
     --second-title-color:#212121;
@@ -36,6 +38,7 @@
     --footer-background:#2F303A;
     --main-social-color:#AFB1B8;
     --sekond-social-color:#FFFFFF;
+    --main-icon-modal-color:#212121;
 }
 
 /* html{
@@ -726,42 +729,97 @@ img{
     margin-bottom: 12px;
 }
 
-.form-data{
-    margin-bottom: 10px;
+/* .form-data{
     display: flex;
     flex-direction: column;
+} */
+
+.form-data-text{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color:var(--main-text-color);
 }
 
-.form-data label{
-    margin-bottom: 4px;
+.form-icon-position{
+    position: relative;
 }
-.form-data input{
-    margin: 0;
-    padding: 6px 10px;
+.form-data-icon{
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    fill: var(--main-icon-modal-color);
+}
+
+.form-data-icon:hover,
+.form-data-icon:focus{
+    fill: var(--accent-color);
+}
+
+.form-data-input{
+    margin-top: 4px;
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+    height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
+    /* outline: none; */
 }
 
-.comment{
-    margin-bottom: 20px;
+.form-data-input:hover,
+.form-data-input:focus{
+    border: 1px solid var(--accent-color);
+}
+
+/* .comment{
     display: flex;
     flex-direction: column;
-}
+} */
 
-.comment label{
-    margin-bottom: 4px;
-}
 .comment textarea{
+    margin-top: 4px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 120px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
     padding: 12px 16px;
-    min-height: 120px;
     resize: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-btn-close{
+.comment textarea::placeholder{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox{
+    text-align: center;
+}
+
+.user-consent-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;  
+    color: var(--main-text-color);   
+}
+
+.contract{
+    color: var(--accent-color);
+}
+.modal-btn-send{
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
