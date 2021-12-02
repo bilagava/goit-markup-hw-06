@@ -509,6 +509,7 @@ img{
 
     padding-top: 60px;
     padding-bottom: 60px;
+    /* position: relative; */
 }
 
 .footer-container{
@@ -620,44 +621,61 @@ img{
     fill: currentColor;
 }
 
-.footer-mailing{
+/* .footer-mailing{
     margin-left: 93px;
     width: 593px;
     height: 86px;
-    position: relative;
-}
-.footer-mailing-title{
+    } */
+
+    /* +++++++++++++++++++++++++ */
+
+/* .footer-mailing-title{
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-title-color);
+    margin-left: 93px;
     margin-bottom: 20px;
 }
 
 .footer-mailing-form{
-    display: flex;   
+    display: flex; 
+    position: absolute;
+    top: 108px;
+    right: 215px;
+    transform: translateX(20%);
 }
 
-.footer-mail input{
+.footer-mail-field{
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    padding: 0;
+    padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    background-color: var(--footer-background);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
 }
 .footer-btn-subscribe{
-    position: absolute;
-    right: 0;
-    top: 36px;
+    display: flex;
     padding: 0;
     min-width: 200px;
     height: 50px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    /* align-items: center;
-    text-align: center; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     letter-spacing: 0.06em;
     color: var(--main-title-color);
     background: var(--accent-color);
@@ -665,6 +683,65 @@ img{
     border-radius: 4px;
 }
 
+.footer-btn-icon{
+    margin-left: 10px;
+} */
+ /* )))))))))))))))))))))))))))))))) */
+
+.footer-mailing-title{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--main-title-color);
+    margin-left: 93px;
+    margin-bottom: 20px;
+}
+
+.footer-mailing-form{
+    display: flex; 
+    margin-left: 93px;
+}
+
+.footer-mail-input{
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    padding: 0;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: var(--footer-background);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
+}
+.footer-btn-subscribe{
+    display: flex;
+    padding: 0;
+    min-width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--main-title-color);
+    background: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.footer-btn-icon{
+    margin-left: 10px;
+}
 
 /* -------- MODAL -------------------------- */
 
@@ -753,6 +830,7 @@ img{
     left: 15px;
     top: 14px;
     fill: var(--main-icon-modal-color);
+    cursor: pointer;
 }
 
 .form-data-icon:hover,
@@ -777,6 +855,12 @@ img{
 .form-data-input:hover,
 .form-data-input:focus{
     border: 1px solid var(--accent-color);
+    outline: none;
+}
+
+.form-data-input:hover + .form-data-icon,
+.form-data-input:focus + .form-data-icon{
+    fill: var(--accent-color);
 }
 
 .comment{
