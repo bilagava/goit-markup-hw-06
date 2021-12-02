@@ -414,9 +414,11 @@
                         <label class="form-data-text" for="user-comment">Коментарий</label>
                         <textarea name="comment" id="user-comment" placeholder="Введите текст"></textarea>
                     </div>
-                    <div class="check-box ">
-                        <input type="checkbox" name="consent" value="Соглашаюсь с рассылкой и принимаю Условия договора" class="checkbox-input" >
-                        <label for="user-consent" class="user-consent-text" >Соглашаюсь с рассылкой и принимаю <a href="#" class="contract">Условия договора</a></label>
+                    <div class="check-box">
+                        <input type="checkbox" name="consent" id="user-consent"  class="check-input" >
+                        <span class="check-icon"></span>
+                        <label for="user-consent" class="check-text">Соглашаюсь с рассылкой и принимаю <a href="#" class="contract">Условия договора</a>
+                        </label>
                     </div>                 
                     <button type="submit" class="modal-btn-send">Отправить</button>
                 </form>
@@ -426,3 +428,4 @@
         <script src="./js/modal.js"></script>
     </body>
 </html>
+value="Соглашаюсь с рассылкой и принимаю Условия договора"

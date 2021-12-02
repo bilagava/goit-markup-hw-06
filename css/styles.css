@@ -621,73 +621,6 @@ img{
     fill: currentColor;
 }
 
-/* .footer-mailing{
-    margin-left: 93px;
-    width: 593px;
-    height: 86px;
-    } */
-
-    /* +++++++++++++++++++++++++ */
-
-/* .footer-mailing-title{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--main-title-color);
-    margin-left: 93px;
-    margin-bottom: 20px;
-}
-
-.footer-mailing-form{
-    display: flex; 
-    position: absolute;
-    top: 108px;
-    right: 215px;
-    transform: translateX(20%);
-}
-
-.footer-mail-field{
-    margin-right: 12px;
-    width: 358px;
-    height: 50px;
-    padding: 0;
-    padding-left: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-sizing: border-box;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-    background-color: var(--footer-background);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    align-items: center;
-    letter-spacing: 0.03em;
-}
-.footer-btn-subscribe{
-    display: flex;
-    padding: 0;
-    min-width: 200px;
-    height: 50px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: var(--main-title-color);
-    background: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-}
-
-.footer-btn-icon{
-    margin-left: 10px;
-} */
- /* )))))))))))))))))))))))))))))))) */
-
 .footer-mailing-title{
     font-weight: 700;
     font-size: 14px;
@@ -701,10 +634,11 @@ img{
 
 .footer-mailing-form{
     display: flex; 
-    margin-left: 93px;
+    /* margin-left: 93px; */
 }
 
 .footer-mail-input{
+    margin-left: 93px;
     margin-right: 12px;
     width: 358px;
     height: 50px;
@@ -721,6 +655,7 @@ img{
     align-items: center;
     letter-spacing: 0.03em;
 }
+
 .footer-btn-subscribe{
     display: flex;
     padding: 0;
@@ -731,7 +666,6 @@ img{
     line-height: 1.87;
     align-items: center;
     justify-content: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: var(--main-title-color);
     background: var(--accent-color);
@@ -828,9 +762,11 @@ img{
 .form-data-icon{
     position: absolute;
     left: 15px;
-    top: 14px;
+    top: 50%;
+    transform: translateY(-50%);
     fill: var(--main-icon-modal-color);
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-data-icon:hover,
@@ -841,15 +777,13 @@ img{
 .form-data-input{
     margin-top: 4px;
     padding-left: 42px;
-    /* padding-top: 12px;
-    padding-bottom: 12px; */
     width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
     border-radius: 4px;
     cursor: pointer;
-    /* outline: none; */
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-data-input:hover,
@@ -893,29 +827,47 @@ img{
     color: rgba(117, 117, 117, 0.5);
 }
 
-.check-box{
-    text-align: center;
-}
-
-/* .checkbox-input:checked + .user-consent-text{
-    background-image: url("../images/icons.svg#icon-check"); 
-    background-color: tomato;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-color: tomato;
-    background-origin: border-box;
-} */
-
-.user-consent-text{
+.check-text{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;  
-    color: var(--main-text-color);   
+    letter-spacing: 0.03em; 
+    color: var(--main-text-color);  
 }
 
 .contract{
     color: var(--accent-color);
+}
+
+.check-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.check-input{
+    appearance: none;
+    
+}
+
+.check-icon{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: 2px solid var(--main-icon-modal-color);
+    margin-right: 7px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check-input:checked + .check-icon{
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
+    background-image: url(../images/check.svg); 
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .modal-btn-send{
