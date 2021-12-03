@@ -414,12 +414,28 @@
                         <label class="form-data-text" for="user-comment">Коментарий</label>
                         <textarea name="comment" id="user-comment" placeholder="Введите текст"></textarea>
                     </div>
-                    <div class="check-box">
+
+                    <!-- <div class="check-box">
                         <input type="checkbox" name="consent" id="user-consent"  class="check-input" >
                         <span class="check-icon"></span>
                         <label for="user-consent" class="check-text">Соглашаюсь с рассылкой и принимаю <a href="#" class="contract">Условия договора</a>
                         </label>
-                    </div>                 
+                    </div>  -->
+                    
+                    <div class="check-box">
+                        <input type="checkbox" name="policy" id="policy" class="check-input"/>
+                        <label for="policy" class="check-text">
+                            <span class="check-item">
+                                <svg class="check-icon" width="11" height="8"> 
+                                    <use
+                                        href="./images/icons.svg#icon-check"
+                                    ></use>
+                                </svg>
+                            </span>
+                            Соглашаюсь с рассылкой и принимаю <a href="#" class="contract">Условия договора</a>
+                        </label>
+                    </div>
+
                     <button type="submit" class="modal-btn-send">Отправить</button>
                 </form>
             </div>

@@ -839,7 +839,9 @@ img{
     color: var(--accent-color);
 }
 
-.check-box{
+/*----------1-------------- */
+
+/* .check-box{
     display: flex;
     align-items: center;
     justify-content: center;  
@@ -868,7 +870,48 @@ img{
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
+} 
+*/
+
+/*-----------2-------------- */
+
+.check-input{
+    appearance: none;
+    
 }
+.check-text {
+    font-size: 14px;
+    color: var(--main-text-color);
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.check-item {
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 2px;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contract{
+    margin-left: 4px;
+}
+
+.check-icon {
+    fill: #ffffff;
+}
+
+.check-input:checked + .check-text .check-item {
+    background-color: var(--accent-color);
+    border: transparent;
+}
+
+/* ------------------ */
 
 .modal-btn-send{
     margin-left: auto;
